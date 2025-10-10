@@ -15,5 +15,5 @@ function toggleDropdown(i) {
 }
 for (let i = 0; i < dropdowns.length; i++) {
     dropdowns[i].classList.toggle('hidden')
-    droplinks[i].addEventListener('mouseover', () => toggleDropdown(i))
+    droplinks[i].addEventListener('click', () => toggleDropdown(i))
 }
