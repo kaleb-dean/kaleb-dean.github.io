@@ -84,9 +84,12 @@ footer {
 
 body.dark {
     background: rgb(12, 12, 12);
-    color: rgba(255,255,255, 0.8);
+    color: rgba(255,255,255, 0.6);
 }
 
-body.dark a {
-    color: rgba()
+body.dark a, body.dark p.droplink {
+    color: rgba(255,255,255, 0.7);
+}
+body.dark a:hover, body.dark p.droplink:hover {
+    color: rgba(255,255,255, 0.9);
 }
