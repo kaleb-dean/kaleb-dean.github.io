@@ -76,8 +76,8 @@ footer {
 
 @media only screen and (min-width: 1200px) {
     body {
-        padding-left: 4px;
-        padding-right: 4px;
+        padding-left: 16px;
+        padding-right: 16px;
         width: 100%;
     }
 }
