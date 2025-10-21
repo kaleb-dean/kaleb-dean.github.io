@@ -43,7 +43,7 @@ section {
     display:flex; flex-direction: column;
 }
 section.skills p {
-    width: 80%;
+    width: fit-content;
 }
 li {
     width: 80%;
@@ -67,9 +67,10 @@ footer {
 .hidden {
     display: none;
 }
-.droplink, a {
+.droplink {
     margin-top: 4px;
     text-decoration: underline;
+    font-size: 1.2rem;
 }
 .droplink:hover {
     cursor: pointer;
@@ -95,6 +96,9 @@ footer {
     }
     h1 {
         margin-bottom: 0;
+    }
+    section img {
+        margin: auto;
     }
     
 }
