@@ -12,6 +12,7 @@ body {
     margin-left: 16px;
     margin-right: 16px;
     height: fit-content;
+    font-size: 20px;
 }
 header {
     font-size: 1.25rem;
