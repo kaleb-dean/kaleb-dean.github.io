@@ -3,6 +3,9 @@
     --gold: #f1b416;
 
 }
+* {
+    box-sizing: border-box;
+}
 body {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     width: calc(100% - 32px);
@@ -33,9 +36,16 @@ main address {
     font-style: normal;
     grid-row: 1;
     grid-column: 2;
+    display: flex;
+    gap: 4px;
+    flex-direction: column;
 }
-address a {
+address * {
     text-decoration: none;
+    padding: 0;
+    margin: 0;
+    display: inline;
+    outline: blue 1px;
 }
 main aside {
     grid-row: 3;
@@ -43,6 +53,9 @@ main aside {
 }
 section {
     display:flex; flex-direction: column;
+}
+.droplink {
+    outline: solid var(--green) 2px;
 }
 section.skills {
     grid-column: 1/3;
@@ -55,10 +68,8 @@ section.skills h3 {
 section.skills h4 {
     grid-row: 2;
 }
-section.skills p {
+section.skills .droplink {
     max-width: 85%;
-    position: relative;
-    bottom: 36px;
 }
 /* section.skills .hidden {
     visibility: visible;
@@ -81,6 +92,7 @@ li {
     list-style-type: circle;
     position: relative;
     right: 16px;
+    
     padding-bottom: 8px;
 }
 main h3 {
@@ -104,10 +116,9 @@ footer {
 .droplink {
     display: block;
     margin-top: 4px;
+    min-width: 80%;
     width: fit-content;
-    max-width: 60%;
     font-size: 1.2rem;
-    max-width: 45%;
     padding: 4px 8px;
     border: solid rgba(255, 255, 255, 0.05) 1px;
     border-radius: 8px 8px 0 0;
@@ -115,10 +126,14 @@ footer {
 .inline {
     display: inline-block;
 }
+section.certifications .dropdown {
+    border-left: none;
+}
 .dropdown img {
     display: block;
     width: 80%;
-    margin-top: 4px;
+    position: relative;
+    bottom: 16px;
 }
 
 @media only screen and (min-width: 760px) {
@@ -127,7 +142,14 @@ footer {
         padding-right: 16px;
         width: 100%;
     }
-    
+    section.skills .droplink {
+        min-width: 67%;
+        width: 67%;
+        max-width: 67%;
+    }
+    section.skills li {
+        bottom: 28px;
+    }
 }
 @media only screen and (max-width: 760px) {
     body {
@@ -151,8 +173,12 @@ footer {
     section.skills {
         display: block;
     }
-    section.skills p {
-        bottom: 24px;
+    section.skills .droplink {
+        
+        text-align: center;
+    }
+    section.certifications .droplink {
+        width: 100%;
     }
 }
 
