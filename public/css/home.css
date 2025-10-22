@@ -36,20 +36,43 @@ address a {
     text-decoration: none;
 }
 main aside {
-    grid-row: 2/4;
-    grid-column: 2;
+    grid-row: 3;
+    grid-column: 1;
 }
 section {
     display:flex; flex-direction: column;
 }
-section.skills p {
-    width: fit-content;
+section.skills {
+    grid-column: 1/3;
+    grid-row: 2;
+    max-width: 400px;
 }
+section.skills h3 {
+    grid-row: 1;
+}
+section.skills h4 {
+    grid-row: 2;
+}
+section.skills p {
+    max-width: 85%;
+    position: relative;
+    bottom: 36px;
+}
+section.skills .hidden {
+    visibility: visible;
+    height: 1px;
+    display: block;
+    overflow-y: hidden;
+}
+
 li {
     width: 80%;
 }
 main h3 {
     margin-bottom: 0;
+}
+section.certifications {
+    grid-column: 2;
 }
 img {
     width: 80%;
@@ -79,14 +102,15 @@ footer {
     display: inline-block;
 }
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 760px) {
     body {
         padding-left: 16px;
         padding-right: 16px;
         width: 100%;
     }
+    
 }
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 760px) {
     body * {
         display: block;
     }
@@ -99,6 +123,12 @@ footer {
     }
     section img {
         margin: auto;
+    }
+    section.skills {
+        display: block;
+    }
+    section.skills p {
+        bottom: 24px;
     }
     
 }
